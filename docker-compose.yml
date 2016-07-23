@@ -1,0 +1,9 @@
+svgtoico:
+  build: docker
+  container_name: inkscape
+  volumes:
+    - .:/var/work
+  environment:
+    - EXPORT_WIDTH=32
+    - EXPORT_HEIGHT=32
+  command: /var/work/svgtoico.sh
